@@ -37,13 +37,25 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+group :development do
+  gem 'rails3-generators'
+end
 
-group :cucumber do
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'rspec-instafail'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'rb-fsevent'
+  gem 'growl'
+  gem 'pry'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'cucumber-rails'
   gem 'cucumber'
-  gem 'rspec-rails'
+  gem 'guard-spork'
+  gem "guard-bundler"
+  gem "guard-rspec"
+  gem "guard-migrate"
   gem 'spork'
-  gem 'launchy'    # So you can do Then show me the page
 end

@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe Post do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'should invalid with no empty object' do
+    Post.new.should be_invalid
+  end
 end

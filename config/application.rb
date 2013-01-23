@@ -60,7 +60,8 @@ module TesteCucumber
     config.assets.version = '1.0'
     
     config.generators do |g|
-      g.test_framework :rspec
+      g.test_framework :rspec, :fixture => true
+      g.fixture_replacement :factory_girl, :dir => 'spec/factories'
     end
   end
 end
